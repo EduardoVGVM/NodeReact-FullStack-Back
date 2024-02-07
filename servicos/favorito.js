@@ -16,10 +16,9 @@ function InserirFavorito(id) {
 }
 
 function ExcluirFavorito(id) {
-    const favoritos = JSON.parse(fs.readFileSync("favoritos.json"))
-    const novaLista = favoritos.filter(favorito => favorito.id !== id)
+    const favoritos = JSON.parse( fs.readFileSync("favoritos.json") )
+    const novaLista = favoritos.filter( livro => livro.id !== id)
     fs.writeFileSync("favoritos.json", JSON.stringify(novaLista))
-    return favoritos;
 }
 
 module.exports = {

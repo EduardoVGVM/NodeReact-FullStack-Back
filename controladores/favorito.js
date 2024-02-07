@@ -25,7 +25,7 @@ function deleteFavorito(req, res) {
 
         if (id && Number(id)) {
             ExcluirFavorito(id);
-            res.status(204);
+            res.send("Favorito deletado com sucesso")
         } else {
             res.status(422).send("Id inválido!");
         }
